@@ -6,10 +6,10 @@ import { Page } from 'components/common/Page/Page'
 import { SearchInput } from 'components/common/SearchInput/SearchInput'
 import { Fragment } from 'react'
 import { breedsApiClient, CatBreed } from '../../clients/breedsClient'
-import { Label } from '../../components/common/Label/Label'
-import { CatsContainer } from './cats.style'
 import { useFocusedBreed } from '../../components/cats/hooks/useFocusedBreed'
 import { useSearchBreed } from '../../components/cats/hooks/useSearchBreed'
+import { Label } from '../../components/common/Label/Label'
+import { CatsContainer } from './cats.style'
 
 type CatsProps = {
   breeds?: CatBreed[]
@@ -26,7 +26,7 @@ const Cats = ({ breeds }: CatsProps) => {
   return (
     <Page>
       <Title>Cat breeds</Title>
-      <Container my="5" justifyContent="flex-end">
+      <Container my="3" justifyContent="flex-end">
         <SearchInput value={query} onChange={onSearch} />
       </Container>
       <CatsContainer>

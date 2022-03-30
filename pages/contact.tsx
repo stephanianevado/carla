@@ -9,7 +9,7 @@ import { H3, Title } from '../components/common/Header/Header'
 export default function Contact() {
   return (
     <Page>
-      <Title>Contact me.</Title>
+      <Title mb="3">Contact me.</Title>
       <Container direction="column" mt="4">
         <P>I'm currently looking for new opportunities.</P>
         <P>

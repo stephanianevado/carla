@@ -32,7 +32,7 @@ const BreedDetails = ({
 
   return (
     <Page>
-      <Title mb="2">{name}</Title>
+      <Title mb="3">{name}</Title>
       <Container m="2">
         {wikiUrl && <Link href={wikiUrl}>Wikipedia</Link>}
       </Container>

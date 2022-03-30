@@ -1,4 +1,4 @@
-import { Theme,ThemeColor } from 'components/common/Theme'
+import { Theme, ThemeColor } from 'components/common/Theme'
 import styled from 'styled-components'
 
 export type PProps = {
