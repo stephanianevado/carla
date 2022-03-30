@@ -1,22 +1,24 @@
 import { Theme } from 'components/common/Theme'
 import styled from 'styled-components'
 
+export const FOOTER_HEIGHT = 10
+
 export const Container = styled.footer`
-  margin-top: auto;
+  position: absolute;
   width: 100%;
-  min-height: 3.125rem;
+  margin: auto;
+  margin-top: 10rem;
   background: ${Theme.colors.black};
 `
 
 export const A = styled.a`
   color: ${Theme.colors.white};
   margin: 0.625rem;
-  letter-spacing: 0.2em;
-  font-size: 2rem;
 `
 
 export const Contact = styled.div`
+  height: ${FOOTER_HEIGHT}rem;
   display: flex;
   justify-content: center;
-  margin: 2rem 0;
+  align-items: center;
 `
