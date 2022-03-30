@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const Svg = styled.svg`
   &:hover path,
   &:active path {
-    fill: ${Theme.colors.litePink};
+    fill: ${Theme.colors.pink};
     transition: background-color 0.1s;
   }
 `
