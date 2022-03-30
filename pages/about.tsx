@@ -2,7 +2,6 @@ import { Container, Div } from 'components/common/Container/Container'
 import { Link } from 'components/common/Link/Link'
 import { P } from 'components/common/P/P'
 import { Page } from 'components/common/Page/Page'
-import { Theme } from 'components/common/Theme'
 import Image from 'next/image'
 import { H2, Title } from '../components/common/Header/Header'
 import cat from '../public/cat.svg'
@@ -25,7 +24,7 @@ const About = () => {
           </P>
           <P>
             You can check the{' '}
-            <Link href="/cats" fontSize={`${Theme.fontSize.medium}`}>
+            <Link href="/cats" fontSize="medium">
               Cat breeds
             </Link>{' '}
             section for more information.

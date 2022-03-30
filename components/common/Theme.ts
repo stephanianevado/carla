@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 
 export type ThemeColor = keyof typeof Theme.colors
+export type ThemeFontSize = keyof typeof Theme.fontSize
 
 export const Theme = {
   colors: {

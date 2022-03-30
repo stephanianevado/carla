@@ -1,5 +1,5 @@
-import NextLink,{ LinkProps } from 'next/link'
-import { AProps,StyledA } from './Link.style'
+import NextLink, { LinkProps } from 'next/link'
+import { AProps, StyledA } from './Link.style'
 
 export const Link = ({
   fontSize,

@@ -1,12 +1,13 @@
-import { Theme } from 'components/common/Theme'
+import { Theme, ThemeFontSize } from 'components/common/Theme'
 import styled from 'styled-components'
 
 export type AProps = {
-  fontSize?: string
+  fontSize?: ThemeFontSize
 }
 
 export const StyledA = styled.a<AProps>`
-  font-size: ${(props) => props.fontSize || Theme.fontSize.normal};
+  font-size: ${({ fontSize }) =>
+    fontSize ? Theme.fontSize[fontSize] : Theme.fontSize.normal};
   cursor: pointer;
   text-decoration: underline ${Theme.colors.blue} 0.2rem;
 `
