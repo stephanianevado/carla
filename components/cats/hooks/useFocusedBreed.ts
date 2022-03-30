@@ -8,7 +8,7 @@ export const useFocusedBreed = (breeds: CatBreed[]) => {
   const rightPress = useKeyPress('ArrowRight')
   const leftPress = useKeyPress('ArrowLeft')
   const enterPress = useKeyPress('Enter')
-  const [focusedBreed, setFocusedBreed] = useState(0)
+  const [focusedBreed, setFocusedBreed] = useState(-1)
 
   useEffect(() => {
     if (focusedBreed < breeds.length && rightPress) {
