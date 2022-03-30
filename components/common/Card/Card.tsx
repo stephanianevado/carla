@@ -1,8 +1,8 @@
 import NextLink from 'next/link'
+import { Div } from '../Container/Container'
 import {
   CardFooter,
   CardImage,
-  CardText,
   CardWrapper,
   CardWrapperProps,
   StyledImage,
@@ -30,12 +30,12 @@ export const Card = ({
       <CardImage>
         <StyledImage src={image} layout="fill" objectFit="cover"></StyledImage>
       </CardImage>
-      <CardText>
+      <Div p="1">
         <TextWrapper>
           <h3>{title}</h3>
           <p>{description}</p>
         </TextWrapper>
-      </CardText>
+      </Div>
     </>
   )
   return (

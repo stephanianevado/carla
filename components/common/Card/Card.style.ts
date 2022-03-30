@@ -1,5 +1,5 @@
 import ImageNext from 'next/image'
-import styled,{ css } from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export type CardWrapperProps = {
   active?: boolean
@@ -18,11 +18,7 @@ export const CardWrapper = styled.div<CardWrapperProps>`
     ${cardHover}
   }
   ${({ active }) =>
-    active ? 'box-shadow: 0px 0px 50px rgba(64, 64, 168, 0.4);' : ''}
-`
-
-export const CardText = styled.div`
-  padding: 1rem;
+    active ? 'box-shadow: 0px 0px 50px rgba(64, 64, 168, 0.8);' : ''}
 `
 
 export const TextWrapper = styled.div`
