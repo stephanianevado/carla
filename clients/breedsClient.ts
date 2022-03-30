@@ -1,4 +1,6 @@
-import { getAxios } from './axios'
+import axios from 'axios'
+
+export const getAxios = () => axios.create()
 
 export type CatImage = {
   height: number
