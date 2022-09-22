@@ -9,7 +9,7 @@ import { breedsApiClient, CatBreed } from '../../clients/breedsClient'
 import { useFocusedBreed } from '../../components/cats/hooks/useFocusedBreed'
 import { useSearchBreed } from '../../components/cats/hooks/useSearchBreed'
 import { Label } from '../../components/common/Label/Label'
-import { CatsContainer } from './cats.style'
+import { CatsContainer } from '../../style/cats.style'
 
 type CatsProps = {
   breeds: CatBreed[]

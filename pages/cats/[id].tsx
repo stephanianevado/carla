@@ -8,7 +8,7 @@ import { GetStaticProps } from 'next'
 import { useRouter } from 'next/router'
 import { breedsApiClient, CatBreed } from '../../clients/breedsClient'
 import { Temperament } from '../../components/cats/Temperament/Temperament'
-import { BreedDetailsContainer } from './cats.style'
+import { BreedDetailsContainer } from '../../style/cats.style'
 
 type RouteProps = {
   id: string

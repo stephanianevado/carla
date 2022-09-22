@@ -3,7 +3,7 @@ import { H2, H3, Title } from 'components/common/Header/Header'
 import { Page } from 'components/common/Page/Page'
 import type { NextPage } from 'next'
 import NextLink from 'next/link'
-import { A, HomeCardWrapper } from './index.style'
+import { A, HomeCardWrapper } from '../style/index.style'
 
 type HomeCardsProps = {
   title: string
