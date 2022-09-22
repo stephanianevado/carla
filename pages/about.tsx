@@ -12,8 +12,8 @@ const About = () => {
       <Title mb="3">Steph.</Title>
       <Container mb="3">
         <H2>
-          Hello! My name is Stephania Nevado. I'm a cat lover and your next
-          future colleague (hopefully).
+          {`Hello! My name is Stephania Nevado. I'm a cat lover and your next
+          future colleague (hopefully).`}
         </H2>
       </Container>
       <Container>

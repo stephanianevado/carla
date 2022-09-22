@@ -10,7 +10,7 @@ export const NavBar = () => {
   return (
     <>
       <Nav>
-        <Link href="/">
+        <Link href="/" passHref>
           <NavLink>
             <Image src={logo} alt="logo SVG" width={90} height={90} />
           </NavLink>

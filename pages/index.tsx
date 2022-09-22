@@ -29,7 +29,7 @@ const Home: NextPage = () => (
     <Container direction="column" mb="4">
       <Title>Welcome</Title>
       <H2>To my cat breeds application &hearts;</H2>
-      <H3>I'm Stephania Nevado</H3>
+      <H3>{`I'm Stephania Nevado`}</H3>
     </Container>
     <Container wrap="wrap">
       <Div>

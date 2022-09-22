@@ -8,7 +8,7 @@ type NavItemsProps = {
 export const NavItems = ({ onNavigate }: NavItemsProps) => {
   const NavItem = ({ href, text }: { href: string; text: string }) => (
     <li>
-      <Link href={href}>
+      <Link href={href} passHref>
         <NavLink onClick={onNavigate}>{text}</NavLink>
       </Link>
     </li>

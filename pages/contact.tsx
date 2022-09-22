@@ -31,7 +31,7 @@ export default function Contact() {
         <Div m="2">
           <MobileIcon />
           <p>Available 9:00-18:00</p>
-          <Link href="tel:+34666366475">+34666366475</Link>
+          <Link href="tel:+46723223022">+46723223022</Link>
         </Div>
       </Container>
     </Page>
