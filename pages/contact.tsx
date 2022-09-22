@@ -11,10 +11,10 @@ export default function Contact() {
     <Page>
       <Title mb="3">Contact me.</Title>
       <Container direction="column" mt="4">
-        <P>I'm currently looking for new opportunities.</P>
+        <P>{`I'm currently looking for new opportunities.`}</P>
         <P>
-          I love to code - it was an amazing discovery for me. I'm really eager
-          to hear from you and start contributing.
+          {`I love to code - it was an amazing discovery for me. I'm really eager
+          to hear from you and start contributing.`}
         </P>
       </Container>
       <Container mb="4">

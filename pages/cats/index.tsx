@@ -12,16 +12,16 @@ import { Label } from '../../components/common/Label/Label'
 import { CatsContainer } from './cats.style'
 
 type CatsProps = {
-  breeds?: CatBreed[]
+  breeds: CatBreed[]
 }
 
 const Cats = ({ breeds }: CatsProps) => {
+  const { query, searchResults, onSearch } = useSearchBreed(breeds)
+  const { focusedBreed } = useFocusedBreed(breeds)
+
   if (!breeds) {
     return null
   }
-
-  const { query, searchResults, onSearch } = useSearchBreed(breeds)
-  const { focusedBreed } = useFocusedBreed(breeds)
 
   return (
     <Page>
