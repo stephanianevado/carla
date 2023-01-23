@@ -12,13 +12,13 @@ export const useFocusedBreed = (breeds: CatBreed[]) => {
 
   useEffect(() => {
     if (focusedBreed < breeds.length && rightPress) {
-      setFocusedBreed(focusedBreed + 1)
+      setFocusedBreed((f) => f + 1)
     }
   }, [rightPress])
 
   useEffect(() => {
     if (focusedBreed > 0 && leftPress) {
-      setFocusedBreed(focusedBreed - 1)
+      setFocusedBreed((f) => f - 1)
     }
   }, [leftPress])
 

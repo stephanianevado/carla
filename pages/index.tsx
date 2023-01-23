@@ -14,7 +14,7 @@ type HomeCardsProps = {
 export const HomeCard = ({ title, text, href }: HomeCardsProps) => {
   return (
     <HomeCardWrapper>
-      <NextLink href={href}>
+      <NextLink href={href} passHref>
         <A>
           {`${title} `}
           <p>{text}</p>
