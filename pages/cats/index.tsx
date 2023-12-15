@@ -11,6 +11,10 @@ import { useSearchBreed } from '../../components/cats/hooks/useSearchBreed'
 import { Label } from '../../components/common/Label/Label'
 import { CatsContainer } from '../../style/cats.style'
 
+function delay(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms))
+}
+
 type CatsProps = {
   breeds: CatBreed[]
 }
@@ -69,6 +73,7 @@ export async function getServerSideProps() {
 
     const breedImagePromises = breedsWithId.map(async (breed) => {
       try {
+        await delay(1000)
         const imageResponse = await breedsApiClient.getBreedImage(breed.id)
         const image = imageResponse.length > 0 ? imageResponse[0] : null
         return {
