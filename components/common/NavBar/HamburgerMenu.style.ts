@@ -20,7 +20,7 @@ type MenuProps = {
   open: boolean
 }
 
-export const Menu = styled.div`
+export const Menu = styled.div<MenuProps>`
   z-index: 2;
   background-color: ${Theme.colors.white};
   width: 100%;
