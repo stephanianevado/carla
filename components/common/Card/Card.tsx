@@ -28,7 +28,16 @@ export const Card = ({
   const renderCardBody = () => (
     <>
       <CardImage>
-        <StyledImage src={image} layout="fill" objectFit="cover"></StyledImage>
+        <StyledImage
+          src={image}
+          alt={`${title} image`}
+          width={320}
+          height={200}
+          style={{
+            objectFit: 'cover',
+            objectPosition: 'center',
+          }}
+        />
       </CardImage>
       <Div p="1">
         <TextWrapper>
@@ -41,13 +50,12 @@ export const Card = ({
   return (
     <CardWrapper active={active}>
       {href ? (
-        <NextLink href={href}>
-          <a>{renderCardBody()}</a>
+        <NextLink href={href} legacyBehavior>
+          {renderCardBody()}
         </NextLink>
       ) : (
         renderCardBody()
       )}
-
       <CardFooter>{footer}</CardFooter>
     </CardWrapper>
   )

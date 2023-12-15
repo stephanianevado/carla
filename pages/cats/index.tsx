@@ -61,16 +61,32 @@ const Cats = ({ breeds }: CatsProps) => {
  * added after build time show up on the page.
  */
 export async function getServerSideProps() {
-  let breeds = null
+  let breedsWithImages = null
+
   try {
     const response = await breedsApiClient.getBreeds()
-    breeds = response.filter((breed) => !!breed.image?.url)
+    const breedsWithId = response.filter((breed) => !!breed.id)
+
+    const breedImagePromises = breedsWithId.map(async (breed) => {
+      try {
+        const imageResponse = await breedsApiClient.getBreedImage(breed.id)
+        const image = imageResponse.length > 0 ? imageResponse[0] : null
+        return {
+          ...breed,
+          image: image,
+        }
+      } catch (error) {
+        console.error('FAILED TO GET IMAGE BREED:', error)
+        return breed
+      }
+    })
+    breedsWithImages = await Promise.all(breedImagePromises)
   } catch (e) {
     console.log('FAILED TO GET BREEDS', e)
   }
 
   return {
-    props: { breeds },
+    props: { breeds: breedsWithImages },
   }
 }
 

@@ -1,4 +1,4 @@
-import ImageNext from 'next/image'
+import Image from 'next/image'
 import styled, { css } from 'styled-components'
 
 export type CardWrapperProps = {
@@ -36,7 +36,7 @@ export const CardImage = styled.div`
   position: relative;
 `
 
-export const StyledImage = styled(ImageNext)`
+export const StyledImage = styled(Image)`
   object-fit: cover;
   object-position: 0 5%;
   border-radius: 1rem 1rem 0 0;

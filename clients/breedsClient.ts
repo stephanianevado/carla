@@ -60,6 +60,10 @@ export const breedsApiClient = {
     getAxios()
       .get<CatBreedResponse[]>(`${URL}/breeds?attach_breed=0`)
       .then(({ data }) => data.map((breed) => mapResponse(breed))),
+  getBreedImage: (id: string) =>
+    getAxios()
+      .get<CatImage[]>(`${URL}/images/search?breed_ids=${id}`)
+      .then(({ data }) => data.map((image) => image)),
   getBreed: (id: string) =>
     getAxios()
       .get<CatBreedResponse>(`${URL}/breeds/${id}`)
