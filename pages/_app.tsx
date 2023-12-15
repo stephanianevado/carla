@@ -1,28 +1,24 @@
-import type { NextPage } from 'next'
 import type { AppProps } from 'next/app'
-import type { ReactElement, ReactNode } from 'react'
+import { useEffect, useState } from 'react'
 import { Footer } from '../components/common/Footer/Footer'
 import { NavBar } from '../components/common/NavBar/NavBar'
 import { GlobalStyle } from '../components/common/Theme'
 
-type NextPageWithLayout = NextPage & {
-  getLayout?: (page: ReactElement) => ReactNode
-}
+export default function App({ Component, pageProps }: AppProps) {
+  const [isClient, setIsClient] = useState(false)
 
-type AppPropsWithLayout = AppProps & {
-  Component: NextPageWithLayout
-}
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
 
-function MyApp({ Component, pageProps }: AppPropsWithLayout) {
-  const getLayout = Component.getLayout ?? ((page) => page)
-  return getLayout(
+  return isClient ? (
     <>
       <GlobalStyle />
       <NavBar />
       <Component {...pageProps} />
       <Footer />
     </>
+  ) : (
+    <>No found</>
   )
 }
-
-export default MyApp
