@@ -1,4 +1,4 @@
-import NextLink from 'next/link'
+import Link from 'next/link'
 import { Div } from '../Container/Container'
 import {
   CardFooter,
@@ -49,13 +49,7 @@ export const Card = ({
   )
   return (
     <CardWrapper active={active}>
-      {href ? (
-        <NextLink href={href} legacyBehavior>
-          {renderCardBody()}
-        </NextLink>
-      ) : (
-        renderCardBody()
-      )}
+      {href ? <Link href={href}>{renderCardBody()}</Link> : renderCardBody()}
       <CardFooter>{footer}</CardFooter>
     </CardWrapper>
   )
