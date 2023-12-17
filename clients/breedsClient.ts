@@ -62,7 +62,9 @@ export const breedsApiClient = {
       .then(({ data }) => data.map((breed) => mapResponse(breed))),
   getBreedImage: (id: string) =>
     getAxios()
-      .get<CatImage[]>(`${URL}/images/search?breed_ids=${id}`)
+      .get<CatImage[]>(
+        `${URL}/images/search?limit=67&breed_ids=${id}&api_key=${process.env.CAT_API_KEY}&`
+      )
       .then(({ data }) => data.map((image) => image)),
   getBreed: (id: string) =>
     getAxios()
