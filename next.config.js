@@ -6,4 +6,7 @@ module.exports = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     domains: ['cdn2.thecatapi.com'],
   },
+  compiler: {
+    styledComponents: true,
+  },
 }
