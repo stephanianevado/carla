@@ -65,15 +65,11 @@ const BreedDetails = ({
 }
 
 /**
- * Statically generate all cat breed paths that exist at build time.
- * New cat breeds will be fetched and generated at runtime.
+ * No paths are pre-rendered at build time. Pages are generated on-demand
+ * when first requested, avoiding external API calls during the build.
  */
 export const getStaticPaths = async () => {
-  const breeds = await breedsApiClient.getBreeds()
-  const paths = breeds.map((breed) => `/cats/${breed.id}`)
-
-  // For all new paths at runtime, serve a fallback which will fetch the data on page load.
-  return { paths, fallback: true }
+  return { paths: [], fallback: 'blocking' }
 }
 
 /**
